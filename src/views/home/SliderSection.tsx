@@ -119,21 +119,21 @@ const SliderSection = () => {
                     </p>
 
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <Button href="#" bgColor="bg-emerald-600" hoverColor="bg-emerald-700" onClick={() => setIsOpen(true)}>
+                        <Button bgColor="bg-emerald-600" hoverColor="bg-emerald-700" onClick={() => setIsOpen(true)}>
                             <FiUsers /> Staff Portal <MdKeyboardArrowRight />
                         </Button>
 
-                        <Button href="#" bgColor="bg-white" hoverColor="bg-gray-100" textColor="text-green-800" onClick={() => setIsOpen(true)}>
+                        <Button bgColor="bg-white" hoverColor="bg-gray-100" textColor="text-green-800" onClick={() => setIsOpen(true)}>
                             <FiShield /> Field Officer <MdKeyboardArrowRight />
                         </Button>
 
-                        <Button href="#" bgColor="bg-gray-800" hoverColor="bg-gray-900" onClick={() => setIsOpen(true)}>
+                        <Button bgColor="bg-gray-800" hoverColor="bg-gray-900" onClick={() => setIsOpen(true)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                                 strokeLinejoin="round" className="lucide lucide-file-text w-5 h-5 mr-2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
                                 </path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Admin Access <MdKeyboardArrowRight />
                         </Button>
 
-                        <Button href="#" bgColor="bg-orange-600" hoverColor="bg-orange-700">
+                        <Button bgColor="bg-orange-600" hoverColor="bg-orange-700">
                             <FiAlertTriangle /> Report Incident <MdKeyboardArrowRight />
                         </Button>
                     </div>
@@ -141,7 +141,7 @@ const SliderSection = () => {
                 <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 z-20">
                     <WatchDemoButton />
                 </div>
-            {isOpen && <AccessModal onClose={() => setIsOpen(false)} />}
+                {isOpen && <AccessModal onClose={() => setIsOpen(false)} />}
             </div>
         </>
     );

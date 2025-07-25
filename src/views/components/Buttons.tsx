@@ -1,8 +1,6 @@
 import { ReactNode } from 'react';
-import Link from 'next/link';
 
 interface ButtonProps {
-    href: string;
     children: ReactNode;
     bgColor: string;
     hoverColor: string;
@@ -11,7 +9,6 @@ interface ButtonProps {
 }
 
 const Button = ({
-    href,
     children,
     bgColor,
     hoverColor,
@@ -19,13 +16,12 @@ const Button = ({
     onClick
 }: ButtonProps)  => {
     return (
-        <Link
-            href={href}
+        <button
             className={`flex items-center gap-2 ${bgColor} ${textColor} px-5 py-2 rounded-full transition-transform duration-200 hover:${hoverColor} hover:scale-105`}
             onClick={onClick}
         >
             {children}
-        </Link>
+        </button>
     );
 }
 
