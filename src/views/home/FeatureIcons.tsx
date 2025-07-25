@@ -42,8 +42,8 @@ export const IconSeven = () => (
         <FiFile className="text-purple-700 text-3xl" />
     </button>
 );
-export const IconEight = () => (
-    <button className="bg-red-100 p-4 rounded-xl hover:shadow-md transition">
+export const IconEight = ({ circle = false }: { circle?: boolean }) => (
+    <button className={`bg-red-100 p-4 ${circle ? 'rounded-full' : 'rounded-xl'} hover:shadow-md transition`}>
         <FiAlertTriangle className="text-red-700 text-3xl" />
     </button>
 );

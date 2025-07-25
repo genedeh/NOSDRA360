@@ -143,7 +143,6 @@ const RequestAccessModal = ({ onClose }: { onClose: () => void }) => {
                     </div>
 
 
-                    {/* Sign In Button */}
                     <button
                         type="submit"
                         className="w-full h-12 text-sm mb-5 shadow-lg bg-gradient-to-br from-purple-500 to-indigo-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 hover:bg-purple-800 transition"
