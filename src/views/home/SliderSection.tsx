@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { FaUserTie, FaShieldAlt, FaTools, FaExclamationTriangle } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import Button from '../components/Buttons';
 
 const images = [
     "/images/bg1.jpeg",
@@ -105,26 +106,30 @@ const SliderSection = () => {
                 <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-green-100 to-green-300 bg-clip-text text-transparent">
                     NOSDRA360
                 </h1>
-                <p className="mt-4 text-lg md:text-xl text-mint-200">
+                <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-100 via-green-100 to-green-100 bg-clip-text text-transparent">
                     A Smarter Command for Environmental Oversight
                 </p>
                 <p className="mt-2 max-w-3xl text-sm md:text-base text-gray-200">
-                    Digitizing internal coordination, compliance, and reporting across all departments under the Office of the DG.
+                    Digitizing internal coordination, compliance, and reporting across all departments under the Office of
+                    <br />the DG.
                 </p>
 
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
-                    <a href="#" className="flex items-center gap-2 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">
+                    <Button href="#" bgColor="bg-green-600" hoverColor="bg-green-700">
                         <FaUserTie /> Staff Portal <MdKeyboardArrowRight />
-                    </a>
-                    <a href="#" className="flex items-center gap-2 bg-white text-green-800 px-5 py-2 rounded-full hover:bg-gray-100 transition">
+                    </Button>
+
+                    <Button href="#" bgColor="bg-white" hoverColor="bg-gray-100" textColor="text-green-800">
                         <FaShieldAlt /> Field Officer <MdKeyboardArrowRight />
-                    </a>
-                    <a href="#" className="flex items-center gap-2 bg-gray-800 text-white px-5 py-2 rounded-full hover:bg-gray-900 transition">
+                    </Button>
+
+                    <Button href="#" bgColor="bg-gray-800" hoverColor="bg-gray-900">
                         <FaTools /> Admin Access <MdKeyboardArrowRight />
-                    </a>
-                    <a href="#" className="flex items-center gap-2 bg-orange-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition">
+                    </Button>
+
+                    <Button href="#" bgColor="bg-orange-600" hoverColor="bg-orange-700">
                         <FaExclamationTriangle /> Report Incident <MdKeyboardArrowRight />
-                    </a>
+                    </Button>
                 </div>
             </div>
         </div>
