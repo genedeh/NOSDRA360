@@ -1,6 +1,7 @@
 import { FiMail, FiLock, FiUser, FiEye, FiEyeOff, FiX, FiCheck, FiChevronDown, FiLock as FiLockIcon } from "react-icons/fi";
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
 import { useState } from 'react';
+import ForgotPasswordModal from "./ForgotPasswordModal";
 
 const roles = [
     { value: '', label: 'Select your role' },
@@ -14,10 +15,11 @@ const roles = [
 const AccessModal = ({ onClose }: { onClose: () => void }) => {
     const [selectedRole, setSelectedRole] = useState(roles[0]);
     const [showPassword, setShowPassword] = useState(false);
+    const [isShowPassword, setIsShowPassword] = useState(false);
 
 
     return (
-        <div className="fixed inset-0 bg-opacity-40 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg">
                 {/* Close Button */}
                 <button
@@ -134,10 +136,11 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
 
                 {/* Footer Links */}
                 <div className="flex justify-between items-center mt-4 text-sm">
-                    <button className="text-emerald-500 font-semibold text-sm">Forgot Password?</button>
+                    <button className="text-emerald-500 font-semibold text-sm" onClick={() => setIsShowPassword(true)}>Forgot Password?</button>
                     <button className="text-emerald-500 font-semibold text-sm">Request Access</button>
                 </div>
             </div>
+            {isShowPassword && <ForgotPasswordModal onClose={() => setIsShowPassword(false)} />}
         </div>
     );
 }
