@@ -1,10 +1,10 @@
 "use client";
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import { FaUserTie, FaShieldAlt, FaTools, FaExclamationTriangle } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import Button from '../components/Buttons';
 import WatchDemoButton from './WatchDemoButton';
+import { FiAlertTriangle, FiFile, FiShield, FiUsers } from 'react-icons/fi';
 
 const images = [
     "/images/bg1.jpeg",
@@ -99,9 +99,9 @@ const SliderSection = () => {
                 <Image
                     src="/images/logo.png"
                     alt="NOSDRA Logo"
-                    width={150}
-                    height={150}
-                    className="-mt-32 mb-4 w-28 h-28 p-3 object-contain rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 shadow-md"
+                    width={200}
+                    height={200}
+                    className="-mt-32 mb-4 w-40 h-40 p-3 object-contain rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 shadow-md"
                 />
 
                 <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-green-100 to-green-300 bg-clip-text text-transparent">
@@ -117,19 +117,19 @@ const SliderSection = () => {
 
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                     <Button href="#" bgColor="bg-green-600" hoverColor="bg-green-700">
-                        <FaUserTie /> Staff Portal <MdKeyboardArrowRight />
+                        <FiUsers /> Staff Portal <MdKeyboardArrowRight />
                     </Button>
 
                     <Button href="#" bgColor="bg-white" hoverColor="bg-gray-100" textColor="text-green-800">
-                        <FaShieldAlt /> Field Officer <MdKeyboardArrowRight />
+                        <FiShield /> Field Officer <MdKeyboardArrowRight />
                     </Button>
 
                     <Button href="#" bgColor="bg-gray-800" hoverColor="bg-gray-900">
-                        <FaTools /> Admin Access <MdKeyboardArrowRight />
+                        <FiFile /> Admin Access <MdKeyboardArrowRight />
                     </Button>
 
                     <Button href="#" bgColor="bg-orange-600" hoverColor="bg-orange-700">
-                        <FaExclamationTriangle /> Report Incident <MdKeyboardArrowRight />
+                        <FiAlertTriangle /> Report Incident <MdKeyboardArrowRight />
                     </Button>
                 </div>
             </div>
