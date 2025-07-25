@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FaUserTie, FaShieldAlt, FaTools, FaExclamationTriangle } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import Button from '../components/Buttons';
+import WatchDemoButton from './WatchDemoButton';
 
 const images = [
     "/images/bg1.jpeg",
@@ -100,9 +101,9 @@ const SliderSection = () => {
                     alt="NOSDRA Logo"
                     width={150}
                     height={150}
-                    objectPosition='center'
-                    className="mb-4 rounded-xl bg-white/9 p-2 object-contain w-28 h-28"
+                    className="-mt-32 mb-4 w-28 h-28 p-3 object-contain rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 shadow-md"
                 />
+
                 <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-green-100 to-green-300 bg-clip-text text-transparent">
                     NOSDRA360
                 </h1>
@@ -131,6 +132,9 @@ const SliderSection = () => {
                         <FaExclamationTriangle /> Report Incident <MdKeyboardArrowRight />
                     </Button>
                 </div>
+            </div>
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 z-20">
+                <WatchDemoButton />
             </div>
         </div>
     );
