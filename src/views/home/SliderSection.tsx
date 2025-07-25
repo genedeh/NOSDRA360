@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import Button from '../components/Buttons';
 import WatchDemoButton from './WatchDemoButton';
-import { FiAlertTriangle, FiFile, FiShield, FiUsers } from 'react-icons/fi';
+import { FiAlertTriangle, FiShield, FiUsers } from 'react-icons/fi';
+import { useRouter } from 'next/navigation';
 import AccessModal from './modals/AccessModal';
 
 const images = [
@@ -22,7 +23,7 @@ const SliderSection = () => {
     const [animating, setAnimating] = useState<boolean>(false);
     const [direction, setDirection] = useState<'left' | 'right'>('right');
     const [isOpen, setIsOpen] = useState(false);
-
+    const router = useRouter();
 
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -85,13 +86,13 @@ const SliderSection = () => {
                 {/* Arrows */}
                 <button
                     onClick={() => handleSlide('left')}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
+                    className="absolute left-4 top-1/2 cursor-pointer -translate-y-1/2 text-white text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
                 >
                     <MdKeyboardArrowLeft />
                 </button>
                 <button
                     onClick={() => handleSlide('right')}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
+                    className="absolute right-4 top-1/2 cursor-pointer -translate-y-1/2 text-white text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
                 >
                     <MdKeyboardArrowRight />
                 </button>
@@ -133,7 +134,7 @@ const SliderSection = () => {
                                 </path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Admin Access <MdKeyboardArrowRight />
                         </Button>
 
-                        <Button bgColor="bg-orange-600" hoverColor="bg-orange-700">
+                        <Button bgColor="bg-orange-600" hoverColor="bg-orange-700" onClick={()=> router.push('/report-incident')}>
                             <FiAlertTriangle /> Report Incident <MdKeyboardArrowRight />
                         </Button>
                     </div>

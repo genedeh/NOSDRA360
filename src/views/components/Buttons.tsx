@@ -17,7 +17,7 @@ const Button = ({
 }: ButtonProps)  => {
     return (
         <button
-            className={`flex items-center gap-2 ${bgColor} ${textColor} px-5 py-2 rounded-full transition-transform duration-200 hover:${hoverColor} hover:scale-105`}
+            className={`flex items-center gap-2 cursor-pointer ${bgColor} ${textColor} px-5 py-2 rounded-full transition-transform duration-200 hover:${hoverColor} hover:scale-105`}
             onClick={onClick}
         >
             {children}
