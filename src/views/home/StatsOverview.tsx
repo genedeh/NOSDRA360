@@ -19,7 +19,7 @@ const stats = [
 ];
 const StatsOverview = () => {
     return (
-        <section className="bg-white py-16 px-4 md:px-12 text-center">
+        <section className="bg-white py-16 md:px-60 text-center px-10">
             {/* Statistics Row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
                 {stats.map(({ label, desc }, i) => (
@@ -46,7 +46,7 @@ const StatsOverview = () => {
             </div>
 
             {/* Feature Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:items-center md:justify-items-center items-center justify-items-center">
                 {[
                     {
                         title: 'Environmental Monitoring',
@@ -73,7 +73,7 @@ const StatsOverview = () => {
                         icon: <IconEight />,
                     },
                 ].map(({ title, desc, color, icon }, i) => (
-                    <div className="p-10 rounded-xl shadow-xl bg-white hover:shadow-2xl hover:-translate-y-1 transform transition-all duration-300 text-center w-60 h-full">
+                    <div className="p-10 rounded-xl shadow-lg bg-white hover:shadow-2xl hover:-translate-y-1 transform transition-all duration-300 text-center w-72 h-72">
                         <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl ${color} bg-green-100 mx-auto mb-4`}>
                             {icon}
                         </div>
