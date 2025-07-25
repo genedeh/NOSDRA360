@@ -5,7 +5,6 @@ const ForgotPasswordModal = ({ onClose }: { onClose: () => void }) => {
     return (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg">
-                {/* Close Button */}
                 <button
                     onClick={onClose}
                     className="absolute top-4 right-4 text-gray-500 hover:text-black"
@@ -13,21 +12,20 @@ const ForgotPasswordModal = ({ onClose }: { onClose: () => void }) => {
                     <FiX size={20} />
                 </button>
 
-                {/* Lock Icon */}
                 <div className="flex justify-center">
                     <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                         <FiMail className="text-white text-2xl" />
                     </div>
                 </div>
 
-                {/* Header */}
-                <h2 className="text-2xl font-semibold text-blue-600 text-start mb-1">
+                <h2 className="text-2xl font-semibold text-blue-600 text-start mb-5">
                     Reset Password
                 </h2>
 
-                {/* Form */}
                 <form className="space-y-6">
-                    {/* Email */}
+                    <div className="text-center text-gray-600 mb-6 p-4 bg-blue-50 rounded-lg">
+                        <p className="text-sm">Enter your email address and we'll send you a secure link to reset your password.</p>
+                    </div>
                     <div>
                         <label className="text-sm text-gray-500 font-semibold block mb-1">Email Address</label>
                         <div className="relative">
@@ -42,7 +40,6 @@ const ForgotPasswordModal = ({ onClose }: { onClose: () => void }) => {
                     </div>
 
 
-                    {/* Sign In Button */}
                     <button
                         type="submit"
                         className="w-full h-12 text-sm mb-5 shadow-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 hover:bg-blue-800 transition"
@@ -51,7 +48,6 @@ const ForgotPasswordModal = ({ onClose }: { onClose: () => void }) => {
                     </button>
                 </form>
 
-                {/* Footer Links */}
                 <div className="flex justify-center items-center mt-4 text-sm">
                     <button
                         className="flex items-center gap-1 text-blue-500 font-semibold text-sm"

@@ -2,6 +2,7 @@ import { FiMail, FiLock, FiUser, FiEye, FiEyeOff, FiX, FiCheck, FiChevronDown, F
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
 import { useState } from 'react';
 import ForgotPasswordModal from "./ForgotPasswordModal";
+import RequestAccessModal from "./RequestAccessModal";
 
 const roles = [
     { value: '', label: 'Select your role' },
@@ -15,13 +16,13 @@ const roles = [
 const AccessModal = ({ onClose }: { onClose: () => void }) => {
     const [selectedRole, setSelectedRole] = useState(roles[0]);
     const [showPassword, setShowPassword] = useState(false);
-    const [isShowPassword, setIsShowPassword] = useState(false);
+    const [isShowForgotPasswordModal, setIsShowForgotPasswordModal] = useState(false);
+    const [isShowRequestAccessModal, setIsShowRequestAccessModal] = useState(false);
 
 
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg">
-                {/* Close Button */}
+            <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg max-h-[90vh] overflow-y-auto">
                 <button
                     onClick={onClose}
                     className="absolute top-4 right-4 text-gray-500 hover:text-black"
@@ -29,14 +30,12 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                     <FiX size={20} />
                 </button>
 
-                {/* Lock Icon */}
                 <div className="flex justify-center">
                     <div className="bg-emerald-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                         <FiLockIcon className="text-white text-2xl" />
                     </div>
                 </div>
 
-                {/* Header */}
                 <h2 className="text-xl font-semibold text-emerald-600 text-start mb-1">
                     NOSDRA360 Access
                 </h2>
@@ -44,9 +43,7 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                     Secure access to environmental oversight platform
                 </p>
 
-                {/* Form */}
                 <form className="space-y-6">
-                    {/* Email */}
                     <div>
                         <label className="text-sm text-gray-500 font-semibold block mb-1">Email Address</label>
                         <div className="relative">
@@ -60,14 +57,11 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                         </div>
                     </div>
 
-                    {/* Password */}
                     <div>
                         <label className="text-sm text-gray-500 font-semibold block mb-1">Password</label>
                         <div className="relative">
-                            {/* Lock Icon */}
                             <FiLock className="absolute top-3.5 left-3 text-gray-400" />
 
-                            {/* Password Input */}
                             <input
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Enter your password"
@@ -75,7 +69,6 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                                 className="pl-10 pr-10 py-2 w-full border h-12 border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
                             />
 
-                            {/* Toggle Icon */}
                             <div
                                 onClick={() => setShowPassword((prev) => !prev)}
                                 className="absolute top-3.5 right-3 text-gray-400 cursor-pointer"
@@ -85,7 +78,6 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                         </div>
                     </div>
 
-                    {/* Role Dropdown */}
                     <div>
                         <label className="text-sm text-gray-500 font-semibold block mb-1">Role</label>
                         <div className="relative">
@@ -125,7 +117,6 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                         </div>
                     </div>
 
-                    {/* Sign In Button */}
                     <button
                         type="submit"
                         className="w-full mb-5 shadow-lg bg-emerald-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 hover:bg-emerald-800 transition"
@@ -134,13 +125,13 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                     </button>
                 </form>
 
-                {/* Footer Links */}
                 <div className="flex justify-between items-center mt-4 text-sm">
-                    <button className="text-emerald-500 font-semibold text-sm" onClick={() => setIsShowPassword(true)}>Forgot Password?</button>
-                    <button className="text-emerald-500 font-semibold text-sm">Request Access</button>
+                    <button className="text-emerald-500 font-semibold text-sm" onClick={() => setIsShowForgotPasswordModal(true)}>Forgot Password?</button>
+                    <button className="text-emerald-500 font-semibold text-sm" onClick={() => setIsShowRequestAccessModal(true)}>Request Access</button>
                 </div>
             </div>
-            {isShowPassword && <ForgotPasswordModal onClose={() => setIsShowPassword(false)} />}
+            {isShowForgotPasswordModal && <ForgotPasswordModal onClose={() => setIsShowForgotPasswordModal(false)} />}
+            {isShowRequestAccessModal && <RequestAccessModal onClose={() => setIsShowRequestAccessModal(false)} />}
         </div>
     );
 }
