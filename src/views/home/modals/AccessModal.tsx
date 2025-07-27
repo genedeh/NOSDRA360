@@ -29,6 +29,8 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
             setLoading(false);
             if (selectedRole.value === '') {
                 router.push('/staff-dashboard');
+            } else if (selectedRole.value === 'administrator') {
+                router.push('/admin-dashboard');
             }
         }, 5000);
     };
