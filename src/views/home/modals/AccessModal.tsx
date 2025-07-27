@@ -3,6 +3,7 @@ import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headless
 import { useState } from 'react';
 import ForgotPasswordModal from "./ForgotPasswordModal";
 import RequestAccessModal from "./RequestAccessModal";
+import { useRouter } from "next/navigation";
 
 const roles = [
     { value: '', label: 'Select your role' },
@@ -18,6 +19,19 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
     const [showPassword, setShowPassword] = useState(false);
     const [isShowForgotPasswordModal, setIsShowForgotPasswordModal] = useState(false);
     const [isShowRequestAccessModal, setIsShowRequestAccessModal] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const router = useRouter();
+
+    const handleSignIn = async () => {
+        setLoading(true);
+        // Simulate processing
+        setTimeout(() => {
+            setLoading(false);
+            if (selectedRole.value === '') {
+                router.push('/staff-dashboard');
+            }
+        }, 5000);
+    };
 
 
     return (
@@ -118,10 +132,39 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                     </div>
 
                     <button
-                        type="submit"
-                        className="w-full mb-5 shadow-lg bg-emerald-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 hover:bg-emerald-800 transition"
+                        type="button"
+                        disabled={loading}
+                        onClick={handleSignIn}
+                        className={`w-full mb-5 shadow-lg text-white py-2 rounded-lg font-semibold transition ${loading ? 'bg-emerald-400 cursor-not-allowed' : 'bg-emerald-600 hover:bg-emerald-800 hover:opacity-90'
+                            }`}
                     >
-                        Sign In
+                        {loading ? (
+                            <div className="flex items-center justify-center gap-2">
+                                <svg
+                                    className="animate-spin h-5 w-5 text-white"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <circle
+                                        className="opacity-25"
+                                        cx="12"
+                                        cy="12"
+                                        r="10"
+                                        stroke="currentColor"
+                                        strokeWidth="4"
+                                    ></circle>
+                                    <path
+                                        className="opacity-75"
+                                        fill="currentColor"
+                                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                    ></path>
+                                </svg>
+                                Signing in...
+                            </div>
+                        ) : (
+                            'Sign In'
+                        )}
                     </button>
                 </form>
 
