@@ -102,7 +102,7 @@ const StaffDashboardPage = () => {
                                     alt="NOSDRA360 Logo"
                                     width={40}
                                     height={40}
-                                    className="h-5 w-auto"
+                                    className="h-4 w-auto"
                                 />
                                 <div>
                                     <h1 className="text-xl font-bold text-gray-800">NOSDRA360</h1>
@@ -112,10 +112,12 @@ const StaffDashboardPage = () => {
                             <div className="flex items-center space-x-3">
                                 <button
                                     className="justify-center gap-2 
+                                    cursor-pointer
                               whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none
                                focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
                                [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white
                                 flex items-center space-x-2"
+                                    onClick={() => router.push("/depertment-section")}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -155,6 +157,7 @@ const StaffDashboardPage = () => {
                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
                                 disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input hover:text-accent-foreground
                                 bg-white text-gray-700
+                                cursor-pointer
                                 h-10 px-4 py-2 flex items-center space-x-2 hover:bg-red-50 hover:border-red-200"
                                     onClick={() => router.push("/")}
                                 >

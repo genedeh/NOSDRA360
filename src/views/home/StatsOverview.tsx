@@ -73,7 +73,7 @@ const StatsOverview = () => {
                         icon: <IconEight />,
                     },
                 ].map(({ title, desc, color, icon }, i) => (
-                    <div className="p-10 rounded-xl shadow-lg bg-white hover:shadow-2xl hover:-translate-y-1 transform transition-all duration-300 text-center w-72 h-72">
+                    <div key={i} className="p-10 rounded-xl shadow-lg bg-white hover:shadow-2xl hover:-translate-y-1 transform transition-all duration-300 text-center w-72 h-72">
                         <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl ${color} bg-green-100 mx-auto mb-4`}>
                             {icon}
                         </div>
