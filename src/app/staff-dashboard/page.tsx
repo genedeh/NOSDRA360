@@ -10,7 +10,7 @@ import {
     FiSettings,
     FiUsers,
 } from "react-icons/fi";
-import {colorMap} from "@/constants";
+import { colorMap } from "@/constants";
 const CARDS = [
     {
         title: "Incident Reports",
@@ -105,7 +105,7 @@ const StaffDashboardPage = () => {
                                     className="w-10 h-10 object-contain"
                                 />
                                 <div className="text-center md:text-left">
-                                    <h1 className="text-xl font-bold text-gray-800">NOSDRAConnect</h1>
+                                    <h1 className="text-xl font-bold  text-gray-800">NOSDRAConnect</h1>
                                     <p className="text-sm text-gray-600">Staff Portal</p>
                                 </div>
                             </div>
@@ -225,7 +225,7 @@ const StaffDashboardPage = () => {
                                         <div
                                             key={index}
                                             className={`p-4 rounded-lg border-l-4 ${colorMap[activity.color] || 'bg-gray-100 text-gray-600'
-                                                                                        }`}
+                                                }`}
                                         >
                                             <div className="flex justify-between items-start">
                                                 <div>
@@ -237,7 +237,7 @@ const StaffDashboardPage = () => {
                                                     </p>
                                                 </div>
                                                 <span className="text-xs text-gray-500 flex items-center">
-                                                    <FiClock className="mr-2"/> {activity.time}
+                                                    <FiClock className="mr-2" /> {activity.time}
                                                 </span>
                                             </div>
                                         </div>

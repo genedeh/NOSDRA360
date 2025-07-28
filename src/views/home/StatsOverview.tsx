@@ -13,9 +13,9 @@ import { FiCheckCircle } from 'react-icons/fi';
 const icons = [<IconOne key={1} />, <IconTwo key={2} />, <IconThree key={3} />, <IconFour key={4} />];
 const stats = [
     { label: '24/7', desc: 'Monitoring Coverage' },
-    { label: '500+', desc: 'Incidents Tracked' },
+    { label: '672+', desc: 'Incidents Tracked' },
     { label: '36', desc: 'States Covered' },
-    { label: '98%', desc: 'Response Rate' },
+    { label: '95.3%', desc: 'Response Rate' },
 ];
 const StatsOverview = () => {
     return (

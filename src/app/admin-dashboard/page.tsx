@@ -186,55 +186,50 @@ const AdminDashboard = () => {
             >
               <button
                 type="button"
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
-                  selectedTab !== "departments"
-                    ? " bg-gray-200/50 text-gray-400"
-                    : "bg-white text-black"
-                }`}
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "departments"
+                  ? " bg-gray-200/50 text-gray-400"
+                  : "bg-white text-black"
+                  }`}
                 onClick={() => setSelectedTab("departments")}
               >
                 Departments
               </button>
               <button
                 type="button"
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer${
-                  selectedTab !== "roles"
-                    ? " bg-gray-200/50 text-gray-400"
-                    : "bg-white text-black"
-                }`}
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer${selectedTab !== "roles"
+                  ? " bg-gray-200/50 text-gray-400"
+                  : "bg-white text-black"
+                  }`}
                 onClick={() => setSelectedTab("roles")}
               >
                 Users &amp; Roles
               </button>
               <button
                 type="button"
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
-                  selectedTab !== "config"
-                    ? " bg-gray-200/50 text-gray-400"
-                    : "bg-white text-black"
-                }`}
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "config"
+                  ? " bg-gray-200/50 text-gray-400"
+                  : "bg-white text-black"
+                  }`}
                 onClick={() => setSelectedTab("config")}
               >
                 Configuration
               </button>
               <button
                 type="button"
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
-                  selectedTab !== "logs"
-                    ? " bg-gray-200/50 text-gray-400"
-                    : "bg-white text-black"
-                }`}
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "logs"
+                  ? " bg-gray-200/50 text-gray-400"
+                  : "bg-white text-black"
+                  }`}
                 onClick={() => setSelectedTab("logs")}
               >
                 System Logs
               </button>
               <button
                 type="button"
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
-                  selectedTab !== "reports"
-                    ? " bg-gray-200/50 text-gray-400"
-                    : "bg-white text-black"
-                }`}
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "reports"
+                  ? " bg-gray-200/50 text-gray-400"
+                  : "bg-white text-black"
+                  }`}
                 onClick={() => setSelectedTab("reports")}
               >
                 Reports

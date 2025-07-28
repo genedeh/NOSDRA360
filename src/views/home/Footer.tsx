@@ -75,7 +75,6 @@ const Footer = () => {
                 <p>
                     © 2024 National Oil Spill Detection and Response Agency (NOSDRA). All rights reserved.
                 </p>
-                <p className="text-xs text-gray-600">Powered by Cadnetwork Enterprise</p>
             </div>
         </footer>
     );
