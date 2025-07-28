@@ -115,30 +115,30 @@ const SliderSection = () => {
                         NOSDRAConnect
                     </h1>
                     <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-100 via-green-100 to-green-100 bg-clip-text text-transparent">
-                        A Smarter Command for Environmental Oversight
+                        Leading Environmental Oversight Through Intelligence / Smarter Oversight. Stronger Environmental Impact.
                     </p>
                     <p className="mt-2 max-w-3xl text-sm md:text-base text-gray-200">
-                        Digitizing internal coordination, compliance, and reporting across all departments under the Office of
-                        <br />the DG.
+                        Streamlining internal workflows, regulatory compliance, and departmental reporting under the
+                        <br />Office of Director General.
                     </p>
 
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Button bgColor="bg-teal-600" hoverColor="bg-teal-700" onClick={() => setIsOpen(true)}>
-                            <FiUsers /> Staff Portal <MdKeyboardArrowRight />
+                            <FiUsers /> Employee Access Hub <MdKeyboardArrowRight />
                         </Button>
 
                         <Button bgColor="bg-blue-400" hoverColor="bg-blue-700" textColor="text-black" onClick={() => setIsOpen(true)}>
-                            <FiShield /> Field Officer <MdKeyboardArrowRight />
+                            <FiShield /> Field Operations Specialist <MdKeyboardArrowRight />
                         </Button>
 
                         <Button bgColor="bg-gray-800" hoverColor="bg-gray-900" onClick={() => setIsOpen(true)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                                 strokeLinejoin="round" className="lucide lucide-file-text w-5 h-5 mr-2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
-                                </path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Admin Access <MdKeyboardArrowRight />
+                                </path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Admin Control Center <MdKeyboardArrowRight />
                         </Button>
 
                         <Button bgColor="bg-red-600" hoverColor="bg-red-700" onClick={() => router.push('/report-incident')}>
-                            <FiAlertTriangle /> Report Incident <MdKeyboardArrowRight />
+                            <FiAlertTriangle /> Raise an Alert / Submit Incident Report <MdKeyboardArrowRight />
                         </Button>
                     </div>
                 </div>
