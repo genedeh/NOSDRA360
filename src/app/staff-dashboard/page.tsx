@@ -91,72 +91,62 @@ const StaffDashboardPage = () => {
     return (
         <>
             <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-                <header className="bg-white border-b shadow-lg">
-                    <div className="max-w-7xl mx-auto px-6 py-4">
-                        <div className="flex justify-between items-center">
-                            <div className="flex items-center space-x-4">
+                <header className="bg-white border-b shadow-lg w-full">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                        <div className="flex flex-wrap md:flex-nowrap justify-between items-center gap-y-4">
+
+                            {/* Logo + Title Section */}
+                            <div className="flex items-center space-x-3 w-full md:w-auto justify-center md:justify-start">
                                 <Image
                                     src="/images/logo.png"
                                     alt="NOSDRA360 Logo"
                                     width={40}
                                     height={40}
-                                    className="h-4 w-auto"
+                                    className="w-10 h-10 object-contain"
                                 />
-                                <div>
+                                <div className="text-center md:text-left">
                                     <h1 className="text-xl font-bold text-gray-800">NOSDRA360</h1>
                                     <p className="text-sm text-gray-600">Staff Portal</p>
                                 </div>
                             </div>
-                            <div className="flex items-center space-x-3">
+
+                            {/* Buttons Section */}
+                            <div className="flex flex-col sm:flex-row justify-center md:justify-end items-center gap-3 w-full md:w-auto">
+                                {/* Department Dashboard Button */}
                                 <button
-                                    className="justify-center gap-2 
-                                    cursor-pointer
-                              whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none
-                               focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
-                               [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white
-                                flex items-center space-x-2"
+                                    className="flex items-center justify-center gap-2 h-10 px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-md transition"
                                     onClick={() => router.push("/depertment-section")}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="currentColor"
                                         strokeWidth="2"
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                        className="lucide lucide-building w-4 h-4"
+                                        className="lucide lucide-building"
                                     >
-                                        <rect
-                                            width="16"
-                                            height="20"
-                                            x="4"
-                                            y="2"
-                                            rx="2"
-                                            ry="2"
-                                        ></rect>
-                                        <path d="M9 22v-4h6v4"></path>
-                                        <path d="M8 6h.01"></path>
-                                        <path d="M16 6h.01"></path>
-                                        <path d="M12 6h.01"></path>
-                                        <path d="M12 10h.01"></path>
-                                        <path d="M12 14h.01"></path>
-                                        <path d="M16 10h.01"></path>
-                                        <path d="M16 14h.01"></path>
-                                        <path d="M8 10h.01"></path>
-                                        <path d="M8 14h.01"></path>
+                                        <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
+                                        <path d="M9 22v-4h6v4" />
+                                        <path d="M8 6h.01" />
+                                        <path d="M16 6h.01" />
+                                        <path d="M12 6h.01" />
+                                        <path d="M12 10h.01" />
+                                        <path d="M12 14h.01" />
+                                        <path d="M16 10h.01" />
+                                        <path d="M16 14h.01" />
+                                        <path d="M8 10h.01" />
+                                        <path d="M8 14h.01" />
                                     </svg>
                                     Department Dashboard
                                 </button>
+
+                                {/* Logout Button */}
                                 <button
-                                    className="justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors 
-                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
-                                disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input hover:text-accent-foreground
-                                bg-white text-gray-700
-                                cursor-pointer
-                                h-10 px-4 py-2 flex items-center space-x-2 hover:bg-red-50 hover:border-red-200"
+                                    className="flex items-center justify-center gap-2 h-10 px-4 py-2 text-sm font-semibold text-gray-700 bg-white border hover:bg-red-50 hover:border-red-200 rounded-md transition"
                                     onClick={() => router.push("/")}
                                 >
                                     <FiLogOut /> Logout
@@ -165,6 +155,7 @@ const StaffDashboardPage = () => {
                         </div>
                     </div>
                 </header>
+
                 <main className="max-w-7xl mx-auto px-6 py-8">
                     <div className="mb-8">
                         <h2 className="text-3xl font-bold text-gray-800 mb-2">
