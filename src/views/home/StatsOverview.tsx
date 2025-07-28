@@ -25,7 +25,7 @@ const StatsOverview = () => {
                 {stats.map(({ label, desc }, i) => (
                     <div key={i} className="flex flex-col items-center space-y-3">
                         {icons[i]}
-                        <span className="text-3xl font-bold text-black">{label}</span>
+                        <span className="text-3xl font-bold text-emerald-800">{label}</span>
                         <span className="text-black">{desc}</span>
                     </div>
                 ))}
@@ -33,7 +33,7 @@ const StatsOverview = () => {
 
             {/* Platform Description */}
             <div className="mb-10">
-                <span className="inline-flex items-center gap-2 px-4 py-1 text-sm font-semibold text-green-700 bg-green-100 rounded-full">
+                <span className="inline-flex items-center gap-2 px-4 py-1 text-sm font-semibold text-brown-700 bg-brown-100 rounded-full">
                     <FiCheckCircle className="w-4 h-4" />
                     Comprehensive Platform
                 </span>
@@ -52,7 +52,7 @@ const StatsOverview = () => {
                         title: 'Environmental Monitoring',
                         desc: 'Real-time tracking and monitoring of oil spill incidents across Nigeria',
                         color: 'bg-mint-100',
-                        icon: <IconFive/>,
+                        icon: <IconFive />,
                     },
                     {
                         title: 'Department Coordination',
@@ -74,7 +74,7 @@ const StatsOverview = () => {
                     },
                 ].map(({ title, desc, color, icon }, i) => (
                     <div key={i} className="p-10 rounded-xl shadow-lg bg-white hover:shadow-2xl hover:-translate-y-1 transform transition-all duration-300 text-center w-72 h-72">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl ${color} bg-green-100 mx-auto mb-4`}>
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl ${color} bg-brown-100 mx-auto mb-4`}>
                             {icon}
                         </div>
                         <h3 className="text-lg font-semibold text-gray-800 mb-3">{title}</h3>

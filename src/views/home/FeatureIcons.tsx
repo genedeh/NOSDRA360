@@ -3,31 +3,31 @@ import React from 'react';
 
 export const IconOne = () => (
     <button className="bg-green-100 p-4 rounded-xl hover:shadow-md transition">
-        <FiGlobe className="text-green-700 text-3xl" />
+        <FiGlobe className="text-black  text-3xl" />
     </button>
 );
 
 export const IconTwo = () => (
     <button className="bg-green-100 p-4 rounded-xl hover:shadow-md transition">
-        <FiAlertTriangle className="text-green-700 text-3xl" />
+        <FiAlertTriangle className="text-black text-3xl" />
     </button>
 );
 
 export const IconThree = () => (
     <button className="bg-green-100 p-4 rounded-xl hover:shadow-md transition">
-        <FiShield className="text-green-700 text-3xl" />
+        <FiShield className="text-black text-3xl" />
     </button>
 );
 
 export const IconFour = () => (
     <button className="bg-green-100 p-4 rounded-xl hover:shadow-md transition">
-        <FiZap className="text-green-700 text-3xl" />
+        <FiZap className="text-black text-3xl" />
     </button>
 );
 
 export const IconFive = () => (
     <button className="bg-green-100 p-4 rounded-xl hover:shadow-md transition">
-        <FiShield className="text-green-700 text-3xl" />
+        <FiShield className="text-black text-3xl" />
     </button>
 );
 

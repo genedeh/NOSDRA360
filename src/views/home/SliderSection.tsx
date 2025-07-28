@@ -123,11 +123,11 @@ const SliderSection = () => {
                     </p>
 
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <Button bgColor="bg-emerald-600" hoverColor="bg-emerald-700" onClick={() => setIsOpen(true)}>
+                        <Button bgColor="bg-teal-600" hoverColor="bg-teal-700" onClick={() => setIsOpen(true)}>
                             <FiUsers /> Staff Portal <MdKeyboardArrowRight />
                         </Button>
 
-                        <Button bgColor="bg-white" hoverColor="bg-gray-100" textColor="text-green-800" onClick={() => setIsOpen(true)}>
+                        <Button bgColor="bg-blue-400" hoverColor="bg-blue-700" textColor="text-black" onClick={() => setIsOpen(true)}>
                             <FiShield /> Field Officer <MdKeyboardArrowRight />
                         </Button>
 
@@ -137,7 +137,7 @@ const SliderSection = () => {
                                 </path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Admin Access <MdKeyboardArrowRight />
                         </Button>
 
-                        <Button bgColor="bg-orange-600" hoverColor="bg-orange-700" onClick={() => router.push('/report-incident')}>
+                        <Button bgColor="bg-red-600" hoverColor="bg-red-700" onClick={() => router.push('/report-incident')}>
                             <FiAlertTriangle /> Report Incident <MdKeyboardArrowRight />
                         </Button>
                     </div>

@@ -73,7 +73,7 @@ const Footer = () => {
             {/* Bottom Row */}
             <div className="text-center text-sm text-gray-400 space-y-1">
                 <p>
-                    © 2024 National Oil Spill Detection and Response Agency (NOSDRA). All rights reserved.
+                    © {new Date().getFullYear()} National Oil Spill Detection and Response Agency (NOSDRA). All rights reserved.
                 </p>
             </div>
         </footer>
