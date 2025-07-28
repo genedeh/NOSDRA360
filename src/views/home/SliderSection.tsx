@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import Button from '../components/Buttons';
 import WatchDemoButton from './WatchDemoButton';
@@ -28,20 +28,23 @@ const SliderSection = () => {
 
 
 
-    const handleSlide = (dir: 'left' | 'right') => {
-        if (animating) return;
+    const handleSlide = useCallback(
+        (dir: 'left' | 'right') => {
+            if (animating) return;
 
-        setDirection(dir);
-        setAnimating(true);
+            setDirection(dir);
+            setAnimating(true);
 
-        setTimeout(() => {
-            setCurrentIndex((prev) => {
-                if (dir === 'right') return (prev + 1) % images.length;
-                else return (prev - 1 + images.length) % images.length;
-            });
-            setAnimating(false);
-        }, 500);
-    };
+            setTimeout(() => {
+                setCurrentIndex((prev) => {
+                    if (dir === 'right') return (prev + 1) % images.length;
+                    else return (prev - 1 + images.length) % images.length;
+                });
+                setAnimating(false);
+            }, 500);
+        },
+        [animating, images.length] // dependencies
+    );
     useEffect(() => {
         const interval = setInterval(() => {
             handleSlide('right');

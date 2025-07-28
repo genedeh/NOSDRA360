@@ -233,7 +233,6 @@ const StaffDashboardPage = () => {
                                     {RECENTACTIVITY.map((activity, index) => (
                                         <div
                                             key={index}
-                                            //@ts-ignore
                                             className={`p-4 rounded-lg border-l-4 ${colorMap[activity.color] || 'bg-gray-100 text-gray-600'
                                                                                         }`}
                                         >

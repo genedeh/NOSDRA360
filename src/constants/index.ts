@@ -1,4 +1,4 @@
-export const colorMap = {
+export const colorMap: Record<string, string> = {
     "emerald": 'bg-emerald-100 text-emerald-600',
     "red": 'bg-red-100 text-red-600',
     "blue": 'bg-blue-100 text-blue-600',
