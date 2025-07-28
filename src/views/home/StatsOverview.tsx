@@ -41,7 +41,7 @@ const StatsOverview = () => {
                     Comprehensive Environmental Management
                 </h2>
                 <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-                    NOSDRA360 provides a unified platform for environmental oversight, incident management, and regulatory compliance across Nigeria.
+                    NOSDRAConnect provides a unified platform for environmental oversight, incident management, and regulatory compliance across Nigeria.
                 </p>
             </div>
 

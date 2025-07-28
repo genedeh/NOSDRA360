@@ -112,7 +112,7 @@ const SliderSection = () => {
                     />
 
                     <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-green-100 to-green-300 bg-clip-text text-transparent">
-                        NOSDRA360
+                        NOSDRAConnect
                     </h1>
                     <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-100 via-green-100 to-green-100 bg-clip-text text-transparent">
                         A Smarter Command for Environmental Oversight

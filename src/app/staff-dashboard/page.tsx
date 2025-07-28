@@ -99,13 +99,13 @@ const StaffDashboardPage = () => {
                             <div className="flex items-center space-x-3 w-full md:w-auto justify-center md:justify-start">
                                 <Image
                                     src="/images/logo.png"
-                                    alt="NOSDRA360 Logo"
+                                    alt="NOSDRAConnect Logo"
                                     width={40}
                                     height={40}
                                     className="w-10 h-10 object-contain"
                                 />
                                 <div className="text-center md:text-left">
-                                    <h1 className="text-xl font-bold text-gray-800">NOSDRA360</h1>
+                                    <h1 className="text-xl font-bold text-gray-800">NOSDRAConnect</h1>
                                     <p className="text-sm text-gray-600">Staff Portal</p>
                                 </div>
                             </div>

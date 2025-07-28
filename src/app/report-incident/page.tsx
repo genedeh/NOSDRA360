@@ -65,7 +65,7 @@ const ReportIncidentPage = () => {
                                 className="object-contain"
                             />
                             <div className=''>
-                                <h3 className='text-xl text-gray-800 font-bold'>NOSDRA360</h3>
+                                <h3 className='text-xl text-gray-800 font-bold'>NOSDRAConnect</h3>
                                 <p className='text-gray-600 text-sm'>Public Incident Reporting</p>
                             </div>
                         </div>

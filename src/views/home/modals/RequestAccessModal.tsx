@@ -40,7 +40,7 @@ const RequestAccessModal = ({ onClose }: { onClose: () => void }) => {
 
                 <form className="space-y-6">
                     <div className="text-center text-gray-600 mb-6 p-4 bg-purple-50 rounded-lg">
-                        <p className="text-sm">Fill out this form to request access to NOSDRA360 platform.</p>
+                        <p className="text-sm">Fill out this form to request access to NOSDRAConnect platform.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NOSDRA360 - Environmental Oversight Platform",
+  title: "NOSDRAConnect - Environmental Oversight Platform",
 };
 
 export default function RootLayout({

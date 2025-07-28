@@ -53,7 +53,7 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                 </div>
 
                 <h2 className="text-xl font-semibold text-emerald-600 text-start mb-1">
-                    NOSDRA360 Access
+                    NOSDRAConnect Access
                 </h2>
                 <p className="text-sm text-gray-500 text-start mb-6">
                     Secure access to environmental oversight platform

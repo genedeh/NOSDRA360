@@ -103,13 +103,13 @@ const AdminDashboard = () => {
               <div className="flex items-center space-x-4">
                 <Image
                   src="/images/logo.png"
-                  alt="NOSDRA360 Logo"
+                  alt="NOSDRAConnect Logo"
                   width={40}
                   height={40}
                   className="h-4 w-auto"
                 />
                 <div>
-                  <h1 className="text-xl font-bold text-gray-800">NOSDRA360</h1>
+                  <h1 className="text-xl font-bold text-gray-800">NOSDRAConnect</h1>
                   <p className="text-sm text-gray-600 flex items-center">
                     <FiShield className="text-blue-600 mr-2" /> Administrator
                     Portal
