@@ -3,18 +3,18 @@ import { FiMail, FiX, FiArrowLeft } from "react-icons/fi";
 const ForgotPasswordModal = ({ onClose }: { onClose: () => void }) => {
 
     return (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg">
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+            <div className="bg-gray-900 rounded-xl w-full max-w-md p-6 relative shadow-lg">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-gray-500 hover:text-black"
+                    className="absolute top-4 right-4 text-white hover:text-shadow-white cursor-pointer"
                 >
                     <FiX size={20} />
                 </button>
 
                 <div className="flex justify-center">
                     <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                        <FiMail className="text-white text-2xl" />
+                        <FiMail className="text-black text-2xl" />
                     </div>
                 </div>
 
@@ -23,18 +23,18 @@ const ForgotPasswordModal = ({ onClose }: { onClose: () => void }) => {
                 </h2>
 
                 <form className="space-y-6">
-                    <div className="text-center text-gray-600 mb-6 p-4 bg-blue-50 rounded-lg">
+                    <div className="text-center text-black mb-6 p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm">Enter your email address and we&apos;ll send you a secure link to reset your password.</p>
                     </div>
                     <div>
-                        <label className="text-sm text-gray-500 font-semibold block mb-1">Email Address</label>
+                        <label className="text-sm text-white font-semibold block mb-1">Email Address</label>
                         <div className="relative">
-                            <FiMail className="absolute top-3.5 left-3 text-gray-400" />
+                            <FiMail className="absolute top-3.5 left-3 text-white" />
                             <input
                                 type="email"
                                 placeholder="Enter your email"
                                 required
-                                className="pl-10 pr-4 py-2 w-full border h-12 border-gray-300  text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                                className="pl-10 pr-4 py-2 w-full border h-12 border-gray-300  text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                             />
                         </div>
                     </div>

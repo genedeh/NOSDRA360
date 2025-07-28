@@ -212,8 +212,8 @@ const DepeatmentSectionPage = () => {
     const router = useRouter();
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-                <header className="bg-white border-b shadow-lg">
+            <div className="min-h-screen bg-gray-900/70">
+                <header className="bg-gray-900/70 border-transparent shadow-lg">
                     <div className="max-w-7xl mx-auto px-6 py-4">
                         <div className="flex justify-between items-center">
                             <div className="flex items-center space-x-4">
@@ -225,18 +225,18 @@ const DepeatmentSectionPage = () => {
                                     className="h-4 w-auto"
                                 />
                                 <div>
-                                    <h1 className="text-xl font-bold text-gray-800">NOSDRAConnect</h1>
-                                    <p className="text-sm text-gray-600">Departement Section</p>
+                                    <h1 className="text-xl font-bold text-white">NOSDRAConnect</h1>
+                                    <p className="text-sm text-white">Departement Section</p>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <button
                                     className="justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors 
                                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
-                                    disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input hover:text-accent-foreground
-                                    bg-white text-gray-700
+                                    disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0  hover:text-black
+                                    bg-gray-700 text-white
                                     cursor-pointer
-                                    h-10 px-4 py-2 flex items-center space-x-2 hover:bg-red-50 hover:border-red-200"
+                                    h-10 px-4 py-2 flex items-center space-x-2 hover:bg-red-100 hover:border-red-200"
                                     onClick={() => router.push("/")}
                                 >
                                     <FiLogOut /> Logout
@@ -247,10 +247,10 @@ const DepeatmentSectionPage = () => {
                 </header>
                 <main className="max-w-7xl mx-auto px-6 py-8">
                     <div className="mb-8">
-                        <h2 className="text-3xl font-bold text-gray-800 mb-2">
+                        <h2 className="text-3xl font-bold text-white mb-2">
                             Select Your Department
                         </h2>
-                        <p className="text-gray-600">
+                        <p className="text-white text-sm">
                             Choose your department to access specialized tools and workflows.
                         </p>
                     </div>
@@ -258,7 +258,7 @@ const DepeatmentSectionPage = () => {
                         {DEPARTMENTS.map((dept, index) => (
                             <div
                                 key={index}
-                                className="rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-l-emerald-500"
+                                className="rounded-lg border-transparent bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 hover:shadow-lg hover:shadow-gray-600 transition-all duration-300 cursor-pointer border-l-4 border-l-emerald-500"
                             // onClick={() => router.push(`/departments/${dept.name.toLowerCase()}`)}
                             >
                                 <div className="flex flex-col space-y-1.5 p-6 text-center pb-4">
@@ -267,12 +267,12 @@ const DepeatmentSectionPage = () => {
                                             }`}                                    >
                                         {dept.icon}
                                     </div>
-                                    <h3 className="tracking-tight text-lg font-semibold text-gray-800">
+                                    <h3 className="tracking-tight text-lg font-semibold text-white">
                                         {dept.name}
                                     </h3>
                                 </div>
                                 <div className="p-6 pt-0 text-center">
-                                    <p className="text-sm text-gray-600 mb-4">
+                                    <p className="text-sm text-white mb-4">
                                         {dept.description}
                                     </p>
                                     <button className="inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 px-4 py-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white">

@@ -96,8 +96,8 @@ const AdminDashboard = () => {
   const router = useRouter();
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-        <header className="bg-white border-b shadow-lg">
+      <div className="min-h-screen bg-gray-900/70">
+        <header className="bg-gray-900/70 border-transparent shadow-lg">
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-4">
@@ -109,8 +109,8 @@ const AdminDashboard = () => {
                   className="h-4 w-auto"
                 />
                 <div>
-                  <h1 className="text-xl font-bold text-gray-800">NOSDRAConnect</h1>
-                  <p className="text-sm text-gray-600 flex items-center">
+                  <h1 className="text-xl font-bold text-white">NOSDRAConnect</h1>
+                  <p className="text-sm text-white flex items-center">
                     <FiShield className="text-blue-600 mr-2" /> Administrator
                     Portal
                   </p>
@@ -119,11 +119,11 @@ const AdminDashboard = () => {
               <div className="flex items-center space-x-3">
                 <button
                   className="justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors 
-                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
-                                disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input hover:text-accent-foreground
-                                bg-white text-gray-700
-                                cursor-pointer
-                                h-10 px-4 py-2 flex items-center space-x-2 hover:bg-red-50 hover:border-red-200"
+                                                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
+                                                   disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0  hover:text-black
+                                                   bg-gray-700 text-white
+                                                   cursor-pointer
+                                                   h-10 px-4 py-2 flex items-center space-x-2 hover:bg-red-100 hover:border-red-200"
                   onClick={() => router.push("/")}
                 >
                   <FiLogOut /> Logout
@@ -134,10 +134,10 @@ const AdminDashboard = () => {
         </header>
         <main className="max-w-7xl mx-auto px-6 py-8">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">
+            <h2 className="text-3xl font-bold text-white mb-2">
               Administrator Console
             </h2>
-            <p className="text-gray-600">
+            <p className="text-white">
               Platform configuration, user management, and system monitoring.
             </p>
           </div>
@@ -145,10 +145,10 @@ const AdminDashboard = () => {
             {CARDS.map((card, index) => (
               <div
                 key={index}
-                className="rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-l-blue-500"
+                className="rounded-lg border-transparent  bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 hover:shadow-lg hover:shadow-gray-600  transition-all duration-300 cursor-pointer border-l-4 border-l-blue-500"
               >
                 <div className="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
-                  <h3 className="tracking-tight text-sm font-medium text-gray-700">
+                  <h3 className="tracking-tight text-sm font-medium text-white">
                     {card.title}
                   </h3>
                   <div
@@ -159,20 +159,20 @@ const AdminDashboard = () => {
                 </div>
                 <div className="p-6 pt-0">
                   <div className="flex items-baseline space-x-2">
-                    <div className="text-2xl font-bold text-gray-800">
+                    <div className="text-2xl font-bold text-white">
                       {card.count}
                     </div>
                     <span
                       className={
                         card.change.startsWith("+")
-                          ? `text-sm font-medium text-green-600`
+                          ? `text-sm font-medium text-emerald-400`
                           : "text-sm font-medium text-red-600"
                       }
                     >
                       {card.change}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-600 mt-1">
+                  <p className="text-xs text-white mt-1">
                     {card.description}
                   </p>
                 </div>
@@ -187,7 +187,7 @@ const AdminDashboard = () => {
               <button
                 type="button"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "departments"
-                  ? " bg-gray-200/50 text-gray-400"
+                  ? " bg-gray-800/50 text-gray-400"
                   : "bg-white text-black"
                   }`}
                 onClick={() => setSelectedTab("departments")}
@@ -197,7 +197,7 @@ const AdminDashboard = () => {
               <button
                 type="button"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer${selectedTab !== "roles"
-                  ? " bg-gray-200/50 text-gray-400"
+                  ? " bg-gray-800/50 text-gray-400"
                   : "bg-white text-black"
                   }`}
                 onClick={() => setSelectedTab("roles")}
@@ -207,7 +207,7 @@ const AdminDashboard = () => {
               <button
                 type="button"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "config"
-                  ? " bg-gray-200/50 text-gray-400"
+                  ? " bg-gray-800/50 text-gray-400"
                   : "bg-white text-black"
                   }`}
                 onClick={() => setSelectedTab("config")}
@@ -217,7 +217,7 @@ const AdminDashboard = () => {
               <button
                 type="button"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "logs"
-                  ? " bg-gray-200/50 text-gray-400"
+                  ? " bg-gray-800/50 text-gray-400"
                   : "bg-white text-black"
                   }`}
                 onClick={() => setSelectedTab("logs")}
@@ -227,7 +227,7 @@ const AdminDashboard = () => {
               <button
                 type="button"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${selectedTab !== "reports"
-                  ? " bg-gray-200/50 text-gray-400"
+                  ? " bg-gray-800/50 text-gray-400"
                   : "bg-white text-black"
                   }`}
                 onClick={() => setSelectedTab("reports")}
@@ -237,9 +237,9 @@ const AdminDashboard = () => {
             </div>
             {selectedTab === "departments" && (
               <div className="mt-2 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                <div className="rounded-lg border bg-white text-card-foreground shadow-sm">
+                <div className="rounded-lg  bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 ">
                   <div className="space-y-1.5 p-6 flex flex-row items-center justify-between">
-                    <h3 className="text-2xl font-semibold leading-none tracking-tight text-black flex items-center space-x-2">
+                    <h3 className="text-2xl font-semibold leading-none tracking-tight text-white flex items-center space-x-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -273,7 +273,7 @@ const AdminDashboard = () => {
                       </svg>
                       <span>Department Management</span>
                     </h3>
-                    <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold px-4 bg-black text-white py-2">
+                    <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold px-4 bg-white text-black py-2">
                       <FiPlus className="mr-2" /> Add Department
                     </button>
                   </div>
@@ -282,28 +282,28 @@ const AdminDashboard = () => {
                       <table className="w-full caption-bottom text-sm">
                         <thead className="[&_tr]:border-b">
                           <tr className="border-b transition-colors hover:bg-muted/50">
-                            <th className="h-12 px-4 text-left align-middle font-semibold  text-gray-600/50 text-muted-foreground">
+                            <th className="h-12 px-4 text-left align-middle font-semibold  text-white/50 text-muted-foreground">
                               Department
                             </th>
-                            <th className="h-12 px-4 text-left align-middle font-semibold  text-gray-600/50 text-muted-foreground">
+                            <th className="h-12 px-4 text-left align-middle font-semibold  text-white/50 text-muted-foreground">
                               Head
                             </th>
-                            <th className="h-12 px-4 text-left align-middle font-semibold  text-gray-600/50 text-muted-foreground">
+                            <th className="h-12 px-4 text-left align-middle font-semibold  text-white/50 text-muted-foreground">
                               KPIs
                             </th>
-                            <th className="h-12 px-4 text-left align-middle font-semibold  text-gray-600/50 text-muted-foreground">
+                            <th className="h-12 px-4 text-left align-middle font-semibold  text-white/50 text-muted-foreground">
                               Users
                             </th>
-                            <th className="h-12 px-4 text-left align-middle font-semibold  text-gray-600/50 text-muted-foreground">
+                            <th className="h-12 px-4 text-left align-middle font-semibold  text-white/50 text-muted-foreground">
                               Status
                             </th>
-                            <th className="h-12 px-4 text-left align-middle font-semibold  text-gray-600/50 text-muted-foreground">
+                            <th className="h-12 px-4 text-left align-middle font-semibold  text-white/50 text-muted-foreground">
                               Actions
                             </th>
                           </tr>
                         </thead>
                         <tbody className="[&_tr:last-child]:border-gray-600">
-                          <tr className="border-b transition-colors hover:bg-muted/50 text-black">
+                          <tr className="border-b transition-colors hover:bg-muted/50 text-white">
                             <td className="p-4 align-middle font-bold">
                               Procument
                             </td>
@@ -318,7 +318,7 @@ const AdminDashboard = () => {
                                 <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors border-transparent  bg-gray-200/50 hover:bg-gray-300/80  text-xs">
                                   Cost Savings
                                 </div>
-                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white hover:bg-white/80  text-xs">
+                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white text-black hover:bg-white/80  text-xs">
                                   + 1 more
                                 </div>
                               </div>
@@ -344,7 +344,7 @@ const AdminDashboard = () => {
                                     className="pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg ring-0"
                                   ></span>
                                 </button>
-                                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-black text-white">
+                                <div className="inline-flex items-center rounded-full border-transparent px-2.5 py-0.5 text-xs font-semibold bg-black text-white">
                                   Active
                                 </div>
                               </div>
@@ -360,7 +360,7 @@ const AdminDashboard = () => {
                               </div>
                             </td>
                           </tr>
-                          <tr className="border-b transition-colors hover:bg-muted/50 text-black">
+                          <tr className="border-b transition-colors hover:bg-muted/50 text-white">
                             <td className="p-4 align-middle font-bold">
                               Legal
                             </td>
@@ -375,7 +375,7 @@ const AdminDashboard = () => {
                                 <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors border-transparent  bg-gray-200/50 hover:bg-gray-300/80  text-xs">
                                   Complaince Rate
                                 </div>
-                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white hover:bg-white/80  text-xs">
+                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white text-black hover:bg-white/80  text-xs">
                                   + 1 more
                                 </div>
                               </div>
@@ -401,7 +401,7 @@ const AdminDashboard = () => {
                                     className="pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg ring-0"
                                   ></span>
                                 </button>
-                                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-black text-white">
+                                <div className="inline-flex items-center rounded-full border-transparent px-2.5 py-0.5 text-xs font-semibold bg-black text-white">
                                   Active
                                 </div>
                               </div>
@@ -417,7 +417,7 @@ const AdminDashboard = () => {
                               </div>
                             </td>
                           </tr>
-                          <tr className="border-b transition-colors hover:bg-muted/50 text-black">
+                          <tr className="border-b transition-colors hover:bg-muted/50 text-white">
                             <td className="p-4 align-middle font-bold">ICT</td>
                             <td className="p-4 align-middle font-light">
                               Mike Johnson
@@ -430,7 +430,7 @@ const AdminDashboard = () => {
                                 <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors border-transparent  bg-gray-200/50 hover:bg-gray-300/80  text-xs">
                                   Security Incidents
                                 </div>
-                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white hover:bg-white/80  text-xs">
+                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white text-black hover:bg-white/80  text-xs">
                                   + 1 more
                                 </div>
                               </div>
@@ -472,7 +472,7 @@ const AdminDashboard = () => {
                               </div>
                             </td>
                           </tr>
-                          <tr className="border-b transition-colors hover:bg-muted/50 text-black">
+                          <tr className="border-b transition-colors hover:bg-muted/50 text-white">
                             <td className="p-4 align-middle font-bold">
                               Finance & Accounts
                             </td>
@@ -487,7 +487,7 @@ const AdminDashboard = () => {
                                 <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors border-transparent  bg-gray-200/50 hover:bg-gray-300/80  text-xs">
                                   Payment Processing Time
                                 </div>
-                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white hover:bg-white/80  text-xs">
+                                <div className="inline-flex items-center rounded-full border-gray-300 border-1 px-2.5 py-0.5 font-semibold transition-colors bg-white text-black hover:bg-white/80  text-xs">
                                   + 1 more
                                 </div>
                               </div>
@@ -513,7 +513,7 @@ const AdminDashboard = () => {
                                     className="pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg ring-0"
                                   ></span>
                                 </button>
-                                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-black text-white">
+                                <div className="inline-flex items-center rounded-full border-transparent   px-2.5 py-0.5 text-xs font-semibold bg-black text-white">
                                   Active
                                 </div>
                               </div>
@@ -537,48 +537,48 @@ const AdminDashboard = () => {
               </div>
             )}
             {selectedTab === "roles" && (
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              <div className="p-4  bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 ">
+                <h3 className="text-lg font-semibold text-white mb-4">
                   User &amp; Role Management
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-white">
                   Manage users, assign roles, and configure permissions.
                 </p>
               </div>
             )}
             {selectedTab === "config" && (
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              <div className="p-4  bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 ">
+                <h3 className="text-lg font-semibold text-white mb-4">
                   System Configuration
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-white">
                   Configure system settings and platform preferences.
                 </p>
               </div>
             )}
             {selectedTab === "logs" && (
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              <div className="p-4  bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 ">
+                <h3 className="text-lg font-semibold text-white mb-4">
                   System Logs
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-white">
                   View system logs for monitoring and troubleshooting.
                 </p>
               </div>
             )}
             {selectedTab === "reports" && (
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              <div className="p-4  bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 ">
+                <h3 className="text-lg font-semibold text-white mb-4">
                   Reports
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-white">
                   Generate and view reports on system performance and usage.
                 </p>
               </div>
             )}
           </div>
           <div className="mt-8">
-            <div className="rounded-lg border bg-card text-card-foreground shadow-lg">
+            <div className="rounded-lg  bg-gray-800/50 text-card-foreground shadow-sm shadow-gray-100/10 ">
               <div className="flex flex-col space-y-1.5 p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-t-lg">
                 <h3 className="text-2xl font-semibold leading-none tracking-tight flex items-center space-x-2">
                   <svg
@@ -617,41 +617,41 @@ const AdminDashboard = () => {
               </div>
               <div className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border-l-4 border-l-blue-400">
-                    <span className="text-sm font-medium text-gray-700">
+                  <div className="flex justify-between items-center p-4 bg-gray-800 rounded-lg border-l-4 border-l-blue-400">
+                    <span className="text-sm font-medium text-white">
                       Server Uptime
                     </span>
                     <div className="flex items-center space-x-2">
-                      <span className="text-sm font-bold text-gray-800">99.8%</span>
+                      <span className="text-sm font-bold text-white">97.8%</span>
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
                   </div>
-                  <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border-l-4 border-l-blue-400">
-                    <span className="text-sm font-medium text-gray-700">
+                  <div className="flex justify-between items-center p-4 bg-gray-800 rounded-lg border-l-4 border-l-blue-400">
+                    <span className="text-sm font-medium text-whte">
                       Active Sessions
                     </span>
                     <div className="flex items-center space-x-2">
-                      <span className="text-sm font-bold text-gray-800">142</span>
+                      <span className="text-sm font-bold text-white">193</span>
                       <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                     </div>
                   </div>
-                  <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border-l-4 border-l-blue-400">
-                    <span className="text-sm font-medium text-gray-700">
+                  <div className="flex justify-between items-center p-4 bg-gray-800 rounded-lg border-l-4 border-l-blue-400">
+                    <span className="text-sm font-medium text-white">
                       Database Size
                     </span>
                     <div className="flex items-center space-x-2">
-                      <span className="text-sm font-bold text-gray-800">
-                        2.4 GB
+                      <span className="text-sm font-bold text-white">
+                        5.4 GB
                       </span>
                       <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                     </div>
                   </div>
-                  <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border-l-4 border-l-blue-400">
-                    <span className="text-sm font-medium text-gray-700">
+                  <div className="flex justify-between items-center p-4 bg-gray-800 rounded-lg border-l-4 border-l-blue-400">
+                    <span className="text-sm font-medium text-white">
                       Backup Status
                     </span>
                     <div className="flex items-center space-x-2">
-                      <span className="text-sm font-bold text-gray-800">
+                      <span className="text-sm font-bold text-white">
                         Current
                       </span>
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>

@@ -38,56 +38,56 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
 
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg max-h-[90vh] overflow-y-auto">
+            <div className="bg-gray-900 rounded-xl w-full max-w-md p-6 relative shadow-lg max-h-[90vh] ">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-gray-500 hover:text-black"
+                    className="absolute top-4 right-4 text-white hover:text-shadow-white cursor-pointer"
                 >
                     <FiX size={20} />
                 </button>
 
                 <div className="flex justify-center">
                     <div className="bg-emerald-500 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                        <FiLockIcon className="text-white text-2xl" />
+                        <FiLockIcon className="text-black text-2xl" />
                     </div>
                 </div>
 
                 <h2 className="text-xl font-semibold text-emerald-600 text-start mb-1">
                     NOSDRAConnect Access
                 </h2>
-                <p className="text-sm text-gray-500 text-start mb-6">
+                <p className="text-sm text-white text-start mb-6">
                     Secure access to environmental oversight platform
                 </p>
 
                 <form className="space-y-6">
                     <div>
-                        <label className="text-sm text-gray-500 font-semibold block mb-1">Email Address</label>
+                        <label className="text-sm text-white font-semibold block mb-1">Email Address</label>
                         <div className="relative">
-                            <FiMail className="absolute top-3.5 left-3 text-gray-400" />
+                            <FiMail className="absolute top-3.5 left-3 text-white" />
                             <input
                                 type="email"
                                 placeholder="Enter your email"
                                 required
-                                className="pl-10 pr-4 py-2 w-full border h-12 border-gray-300  text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+                                className="pl-10 pr-4 py-2 w-full border h-12 border-gray-300  text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
                             />
                         </div>
                     </div>
 
                     <div>
-                        <label className="text-sm text-gray-500 font-semibold block mb-1">Password</label>
+                        <label className="text-sm text-white font-semibold block mb-1">Password</label>
                         <div className="relative">
-                            <FiLock className="absolute top-3.5 left-3 text-gray-400" />
+                            <FiLock className="absolute top-3.5 left-3 text-white" />
 
                             <input
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Enter your password"
                                 required
-                                className="pl-10 pr-10 py-2 w-full border h-12 border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+                                className="pl-10 pr-10 py-2 w-full border h-12 border-gray-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
                             />
 
                             <div
                                 onClick={() => setShowPassword((prev) => !prev)}
-                                className="absolute top-3.5 right-3 text-gray-400 cursor-pointer"
+                                className="absolute top-3.5 right-3 text-white cursor-pointer"
                             >
                                 {showPassword ? <FiEyeOff /> : <FiEye />}
                             </div>
@@ -95,23 +95,23 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                     </div>
 
                     <div>
-                        <label className="text-sm text-gray-500 font-semibold block mb-1">Role</label>
+                        <label className="text-sm text-white font-semibold block mb-1">Role</label>
                         <div className="relative">
-                            <FiUser className="absolute top-3.5 left-3 text-gray-400 z-10" />
+                            <FiUser className="absolute top-3.5 left-3 text-white z-10" />
                             <Listbox value={selectedRole} onChange={setSelectedRole}>
                                 <div className="relative">
-                                    <ListboxButton className="pl-10 pr-10 py-2 w-full h-12 border border-gray-300 rounded-lg text-left focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm text-gray-600">
+                                    <ListboxButton className="pl-10 pr-10 py-2 w-full h-12 border border-gray-300 rounded-lg text-left focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm text-white">
                                         {selectedRole.label}
                                         <FiChevronDown className="absolute top-3.5 right-3 text-gray-400" />
                                     </ListboxButton>
 
-                                    <ListboxOptions className="absolute mt-1 w-full bg-white border border-gray-200 rounded-md shadow-md z-20 max-h-60 overflow-auto">
+                                    <ListboxOptions className="absolute mt-1 w-full bg-gray-900 border border-gray-200 rounded-md shadow-md z-20 max-h-60 overflow-auto">
                                         {roles.map((role, idx) => (
                                             <ListboxOption
                                                 key={idx}
                                                 value={role}
                                                 className={({ active }) =>
-                                                    `cursor-pointer select-none relative py-2 pl-10 pr-4 text-sm ${active ? 'bg-emerald-100 text-emerald-700' : 'text-gray-700'
+                                                    `cursor-pointer select-none relative py-2 pl-10 pr-4 text-sm ${active ? 'bg-emerald-100 text-emerald-700' : 'text-white'
                                                     }`
                                                 }
                                             >
@@ -134,7 +134,7 @@ const AccessModal = ({ onClose }: { onClose: () => void }) => {
                     </div>
 
                     <button
-                        type="button"
+                        type="submit"
                         disabled={loading}
                         onClick={handleSignIn}
                         className={`w-full mb-5 shadow-lg text-white py-2 rounded-lg font-semibold transition ${loading ? 'bg-emerald-400 cursor-not-allowed' : 'bg-emerald-600 hover:bg-emerald-800 hover:opacity-90'

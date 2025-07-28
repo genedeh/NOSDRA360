@@ -5,7 +5,7 @@ import { FiMail, FiExternalLink } from "react-icons/fi";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#0B1727] text-white py-12 px-6 md:px-20">
+        <footer className="bg-gray-200 text-black py-12 px-6 md:px-20">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
                 {/* Agency Info */}
                 <div className="space-y-4">
@@ -13,12 +13,12 @@ const Footer = () => {
                     <Image
                         src="/images/logo.png"
                         alt="NOSDRA Logo"
-                        width={200}
-                        height={200}
-                        className="mt-3 mb-4 w-20 h-20 p-3 object-contain rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 shadow-md"
+                        width={400}
+                        height={400}
+                        className="mt-3 mb-4 w-20 h-20 p-3 object-contain rounded-xl bg-black/5 backdrop-blur-xs border border-black/20 shadow-md"
                     />
 
-                    <p className="text-sm text-gray-300 leading-relaxed">
+                    <p className="text-sm text-black leading-relaxed">
                         National Oil Spill Detection and Response Agency - <br />
                         Protecting Nigeria&apos;s environment through proactive <br />
                         monitoring and rapid response.
@@ -31,21 +31,21 @@ const Footer = () => {
 
                 {/* Contact Us */}
                 <div className="space-y-4">
-                    <h4 className="text-xl font-semibold mb-6 text-emerald-400">Contact Us</h4>
+                    <h4 className="text-xl font-semibold mb-6 text-black">Contact Us</h4>
                     <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-emerald-600/20 rounded-lg flex items-center justify-center mr-3">
-                            <FiMail className=" text-green-500" />
+                        <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center mr-3">
+                            <FiMail className=" text-black" />
                         </div>
-                        <Link href="mailto:info@nosdra.gov.ng" className="text-gray-300 hover:text-white transition-colors">
+                        <Link href="mailto:info@nosdra.gov.ng" className="text-black hover:text-gray-700 transition-colors">
                             info@nosdra.gov.ng
                         </Link>
                     </div>
 
                     <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-emerald-600/20 rounded-lg flex items-center justify-center mr-3">
-                            <FiExternalLink className=" text-green-500" />
+                        <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center mr-3">
+                            <FiExternalLink className=" text-black" />
                         </div>
-                        <Link href="https://environment.gov.ng" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                        <Link href="https://environment.gov.ng" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-700 transition-colors">
                             Federal Ministry of Environment
                         </Link>
                     </div>
@@ -53,14 +53,14 @@ const Footer = () => {
 
                 {/* Quick Links */}
                 <div className="space-y-2">
-                    <h4 className="text-xl font-semibold mb-6 text-emerald-400">Quick Links</h4>
+                    <h4 className="text-xl font-semibold mb-6 text-black">Quick Links</h4>
                     {[
                         "Emergency Response",
                         "Environmental Guidelines",
                         "Reports & Publications",
                         "Training Programs"
                     ].map((link, idx) => (
-                        <p key={idx} className="text-sm text-gray-300 hover:text-white cursor-pointer">
+                        <p key={idx} className="text-sm text-black hover:text-gray-800 cursor-pointer">
                             {link}
                         </p>
                     ))}
@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="border-t border-gray-700 my-8"></div>
 
             {/* Bottom Row */}
-            <div className="text-center text-sm text-gray-400 space-y-1">
+            <div className="text-center text-sm text-black space-y-1">
                 <p>
                     © {new Date().getFullYear()} National Oil Spill Detection and Response Agency (NOSDRA). All rights reserved.
                 </p>

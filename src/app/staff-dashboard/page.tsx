@@ -90,11 +90,10 @@ const StaffDashboardPage = () => {
     const router = useRouter();
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-                <header className="bg-white border-b shadow-lg w-full">
+            <div className="min-h-screen bg-gray-900/70">
+                <header className="bg-gray-900/70 border-b border-transparent shadow-lg w-full">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                         <div className="flex flex-wrap md:flex-nowrap justify-between items-center gap-y-4">
-
                             {/* Logo + Title Section */}
                             <div className="flex items-center space-x-3 w-full md:w-auto justify-center md:justify-start">
                                 <Image
@@ -102,11 +101,13 @@ const StaffDashboardPage = () => {
                                     alt="NOSDRAConnect Logo"
                                     width={40}
                                     height={40}
-                                    className="w-10 h-10 object-contain"
+                                    className="w-13 h-13 object-contain"
                                 />
                                 <div className="text-center md:text-left">
-                                    <h1 className="text-xl font-bold  text-gray-800">NOSDRAConnect</h1>
-                                    <p className="text-sm text-gray-600">Staff Portal</p>
+                                    <h1 className="text-xl font-bold  text-white">
+                                        NOSDRAConnect
+                                    </h1>
+                                    <p className="text-sm text-white">Staff Portal</p>
                                 </div>
                             </div>
 
@@ -114,7 +115,7 @@ const StaffDashboardPage = () => {
                             <div className="flex flex-col sm:flex-row justify-center md:justify-end items-center gap-3 w-full md:w-auto">
                                 {/* Department Dashboard Button */}
                                 <button
-                                    className="flex items-center justify-center gap-2 h-10 px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-md transition"
+                                    className="flex items-center justify-center gap-2 cursor-pointer h-10 px-4 py-2 text-sm font-semibold text-black bg-emerald-600 hover:bg-emerald-700 rounded-md transition"
                                     onClick={() => router.push("/depertment-section")}
                                 >
                                     <svg
@@ -144,9 +145,13 @@ const StaffDashboardPage = () => {
                                     Department Dashboard
                                 </button>
 
-                                {/* Logout Button */}
                                 <button
-                                    className="flex items-center justify-center gap-2 h-10 px-4 py-2 text-sm font-semibold text-gray-700 bg-white border hover:bg-red-50 hover:border-red-200 rounded-md transition"
+                                    className="justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors 
+                                                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
+                                                                    disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0  hover:text-black
+                                                                    bg-gray-700 text-white
+                                                                    cursor-pointer
+                                                                    h-10 px-4 py-2 flex items-center space-x-2 hover:bg-red-100 hover:border-red-200"
                                     onClick={() => router.push("/")}
                                 >
                                     <FiLogOut /> Logout
@@ -158,19 +163,22 @@ const StaffDashboardPage = () => {
 
                 <main className="max-w-7xl mx-auto px-6 py-8">
                     <div className="mb-8">
-                        <h2 className="text-3xl font-bold text-gray-800 mb-2">
+                        <h2 className="text-3xl font-bold text-white mb-2">
                             Welcome to Staff Dashboard
                         </h2>
-                        <p className="text-gray-600">
+                        <p className="text-white">
                             Monitor operations, manage reports, and coordinate response
                             activities.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         {CARDS.map((card, index) => (
-                            <div key={index} className="rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-l-emerald-500">
+                            <div
+                                key={index}
+                                className="rounded-lg border-transparent bg-gray-800/50 text-card-foreground shadow-sm hover:shadow-lg hover:shadow-gray-600 transition-all duration-300 cursor-pointer border-l-4 border-l-emerald-500"
+                            >
                                 <div className="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
-                                    <h3 className="tracking-tight text-sm font-medium text-gray-700">
+                                    <h3 className="tracking-tight text-sm font-medium text-white">
                                         {card.title}
                                     </h3>
                                     <div
@@ -181,22 +189,20 @@ const StaffDashboardPage = () => {
                                 </div>
                                 <div className="p-6 pt-0">
                                     <div className="flex items-baseline space-x-2">
-                                        <div className="text-2xl font-bold text-gray-800">
+                                        <div className="text-2xl font-bold text-white">
                                             {card.count}
                                         </div>
-                                        <span className="text-sm font-medium text-green-600">
+                                        <span className="text-sm font-medium text-emerald-500">
                                             {card.change}
                                         </span>
                                     </div>
-                                    <p className="text-xs text-gray-600 mt-1">
-                                        {card.description}
-                                    </p>
+                                    <p className="text-xs text-white mt-1">{card.description}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div className="rounded-lg border bg-card text-card-foreground shadow-lg">
+                        <div className="rounded-lg border-transparent bg-card text-card-foreground shadow-lg">
                             <div className="flex flex-col space-y-1.5 p-6 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-t-lg">
                                 <h3 className="text-2xl font-semibold leading-none tracking-tight flex items-center gap-3">
                                     <svg
@@ -219,24 +225,24 @@ const StaffDashboardPage = () => {
                                     Recent Activity
                                 </h3>
                             </div>
-                            <div className="p-6">
+                            <div className="p-6 bg-gray-800/50 rounded-b-lg">
                                 <div className="space-y-4">
                                     {RECENTACTIVITY.map((activity, index) => (
                                         <div
                                             key={index}
-                                            className={`p-4 rounded-lg border-l-4 ${colorMap[activity.color] || 'bg-gray-100 text-gray-600'
+                                            className={`p-4 rounded-lg border-l-4 ${colorMap[activity.color] || "bg-gray-100 text-gray-600"
                                                 }`}
                                         >
                                             <div className="flex justify-between items-start">
                                                 <div>
-                                                    <h4 className="font-semibold text-gray-800">
+                                                    <h4 className="font-semibold text-black">
                                                         {activity.title}
                                                     </h4>
-                                                    <p className="text-sm text-gray-600">
+                                                    <p className="text-sm text-black">
                                                         {activity.description}
                                                     </p>
                                                 </div>
-                                                <span className="text-xs text-gray-500 flex items-center">
+                                                <span className="text-xs text-black flex items-center">
                                                     <FiClock className="mr-2" /> {activity.time}
                                                 </span>
                                             </div>
@@ -245,13 +251,13 @@ const StaffDashboardPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="rounded-lg border bg-card text-card-foreground shadow-lg">
+                        <div className="rounded-lg border-transparent bg-card text-card-foreground shadow-lg">
                             <div className="flex flex-col space-y-1.5 p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-t-lg">
                                 <h3 className="text-2xl font-semibold leading-none tracking-tight gap-3 flex items-center space-x-2">
                                     <FiSettings /> Quick Actions
                                 </h3>
                             </div>
-                            <div className="p-6">
+                            <div className="p-6 bg-gray-800/50 rounded-b-lg">
                                 <div className="space-y-4">
                                     <button className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 px-4 w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-left justify-start">
                                         <svg
@@ -308,7 +314,7 @@ const StaffDashboardPage = () => {
                                         </svg>
                                         Generate Report
                                     </button>
-                                    <button className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-white text-gray-700 hover:text-accent-foreground h-10 px-4 w-full py-3 text-left justify-start hover:bg-blue-50">
+                                    <button className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-white text-black hover:text-accent-foreground h-10 px-4 w-full py-3 text-left justify-start hover:bg-blue-50">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
@@ -328,7 +334,7 @@ const StaffDashboardPage = () => {
                                         </svg>
                                         Schedule Inspection
                                     </button>
-                                    <button className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-white text-gray-700 hover:text-accent-foreground h-10 px-4 w-full py-3 text-left justify-start hover:bg-purple-50">
+                                    <button className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-white text-black hover:text-accent-foreground h-10 px-4 w-full py-3 text-left justify-start hover:bg-purple-50">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
@@ -348,7 +354,7 @@ const StaffDashboardPage = () => {
                                         </svg>
                                         Send Notification
                                     </button>
-                                    <button className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-white text-gray-700 hover:text-accent-foreground h-10 px-4 w-full py-3 text-left justify-start hover:bg-green-50">
+                                    <button className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-white text-black hover:text-accent-foreground h-10 px-4 w-full py-3 text-left justify-start hover:bg-green-50">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"

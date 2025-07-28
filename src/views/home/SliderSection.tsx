@@ -89,13 +89,13 @@ const SliderSection = () => {
                 {/* Arrows */}
                 <button
                     onClick={() => handleSlide('left')}
-                    className="absolute left-4 top-1/2 cursor-pointer -translate-y-1/2 text-white text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
+                    className="absolute left-4 top-1/2 cursor-pointer -translate-y-1/2 text-black text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
                 >
                     <MdKeyboardArrowLeft />
                 </button>
                 <button
                     onClick={() => handleSlide('right')}
-                    className="absolute right-4 top-1/2 cursor-pointer -translate-y-1/2 text-white text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
+                    className="absolute right-4 top-1/2 cursor-pointer -translate-y-1/2 text-black text-3xl z-30 bg-white/20 hover:bg-white/30 transition rounded-full p-2"
                 >
                     <MdKeyboardArrowRight />
                 </button>
