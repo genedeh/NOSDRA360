@@ -4,16 +4,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 import {
   FiAlertTriangle,
-  FiBarChart,
-  FiBarChart2,
-  FiCalendar,
-  FiClock,
   FiEdit,
   FiLogOut,
   FiPlus,
-  FiSettings,
   FiShield,
-  FiTrash,
   FiTrash2,
   FiUserCheck,
   FiUsers,
@@ -187,72 +181,60 @@ const AdminDashboard = () => {
           </div>
           <div className="space-y-6" dir="ltr" aria-orientation="horizontal">
             <div
-              aria-orientation="horizontal"
-              role="tablist"
               className="h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full grid-cols-5"
               style={{ outline: "none" }}
             >
               <button
                 type="button"
-                role="tab"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
                   selectedTab !== "departments"
                     ? " bg-gray-200/50 text-gray-400"
                     : "bg-white text-black"
                 }`}
-                aria-orientation="horizontal"
                 onClick={() => setSelectedTab("departments")}
               >
                 Departments
               </button>
               <button
                 type="button"
-                role="tab"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer${
                   selectedTab !== "roles"
                     ? " bg-gray-200/50 text-gray-400"
                     : "bg-white text-black"
                 }`}
-                aria-orientation="horizontal"
                 onClick={() => setSelectedTab("roles")}
               >
                 Users &amp; Roles
               </button>
               <button
                 type="button"
-                role="tab"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
                   selectedTab !== "config"
                     ? " bg-gray-200/50 text-gray-400"
                     : "bg-white text-black"
                 }`}
-                aria-orientation="horizontal"
                 onClick={() => setSelectedTab("config")}
               >
                 Configuration
               </button>
               <button
                 type="button"
-                role="tab"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
                   selectedTab !== "logs"
                     ? " bg-gray-200/50 text-gray-400"
                     : "bg-white text-black"
                 }`}
-                aria-orientation="horizontal"
                 onClick={() => setSelectedTab("logs")}
               >
                 System Logs
               </button>
               <button
                 type="button"
-                role="tab"
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold cursor-pointer ${
                   selectedTab !== "reports"
                     ? " bg-gray-200/50 text-gray-400"
                     : "bg-white text-black"
                 }`}
-                aria-orientation="horizontal"
                 onClick={() => setSelectedTab("reports")}
               >
                 Reports

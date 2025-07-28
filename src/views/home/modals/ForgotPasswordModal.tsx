@@ -24,7 +24,7 @@ const ForgotPasswordModal = ({ onClose }: { onClose: () => void }) => {
 
                 <form className="space-y-6">
                     <div className="text-center text-gray-600 mb-6 p-4 bg-blue-50 rounded-lg">
-                        <p className="text-sm">Enter your email address and we'll send you a secure link to reset your password.</p>
+                        <p className="text-sm">Enter your email address and we&apos;ll send you a secure link to reset your password.</p>
                     </div>
                     <div>
                         <label className="text-sm text-gray-500 font-semibold block mb-1">Email Address</label>

@@ -78,7 +78,7 @@ const ReportIncidentPage = () => {
                             Report Environmental Incident
                         </h2>
                         <p className='text-gray-600'>
-                            Help us protect Nigeria's environment by reporting oil spills and environmental incidents
+                            Help us protect Nigeria&apos;s environment by reporting oil spills and environmental incidents
                         </p>
                     </div>
                     <div className='rounded-lg border bg-card text-card-foreground shadow-xl'>

@@ -1,6 +1,5 @@
 import { FiGlobe, FiAlertTriangle, FiShield, FiZap, FiUsers, FiFile } from 'react-icons/fi';
 import React from 'react';
-import { BsExclamationTriangle, BsFillExclamationTriangleFill } from 'react-icons/bs';
 
 export const IconOne = () => (
     <button className="bg-green-100 p-4 rounded-xl hover:shadow-md transition">

@@ -10,7 +10,7 @@ import {
 } from './FeatureIcons';
 import { FiCheckCircle } from 'react-icons/fi';
 
-const icons = [<IconOne />, <IconTwo />, <IconThree />, <IconFour />];
+const icons = [<IconOne key={1} />, <IconTwo key={2} />, <IconThree key={3} />, <IconFour key={4} />];
 const stats = [
     { label: '24/7', desc: 'Monitoring Coverage' },
     { label: '500+', desc: 'Incidents Tracked' },

@@ -20,7 +20,7 @@ const Footer = () => {
 
                     <p className="text-sm text-gray-300 leading-relaxed">
                         National Oil Spill Detection and Response Agency - <br />
-                        Protecting Nigeria's environment through proactive <br />
+                        Protecting Nigeria&apos;s environment through proactive <br />
                         monitoring and rapid response.
                     </p>
 

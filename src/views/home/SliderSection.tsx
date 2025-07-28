@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import Button from '../components/Buttons';
 import WatchDemoButton from './WatchDemoButton';
@@ -21,18 +21,12 @@ const images = [
 const SliderSection = () => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const [animating, setAnimating] = useState<boolean>(false);
-    const [direction, setDirection] = useState<'left' | 'right'>('right');
+    const [, setDirection] = useState<'left' | 'right'>('right');
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
 
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            handleSlide('right');
-        }, 5000);
-        return () => clearInterval(interval);
-    }, [currentIndex]);
+
 
     const handleSlide = (dir: 'left' | 'right') => {
         if (animating) return;
@@ -48,7 +42,13 @@ const SliderSection = () => {
             setAnimating(false);
         }, 500);
     };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleSlide('right');
+        }, 5000);
+        return () => clearInterval(interval);
 
+    }, [currentIndex, handleSlide]);
     return (
         <>
             <div className="relative w-full h-screen overflow-hidden">
@@ -134,7 +134,7 @@ const SliderSection = () => {
                                 </path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Admin Access <MdKeyboardArrowRight />
                         </Button>
 
-                        <Button bgColor="bg-orange-600" hoverColor="bg-orange-700" onClick={()=> router.push('/report-incident')}>
+                        <Button bgColor="bg-orange-600" hoverColor="bg-orange-700" onClick={() => router.push('/report-incident')}>
                             <FiAlertTriangle /> Report Incident <MdKeyboardArrowRight />
                         </Button>
                     </div>

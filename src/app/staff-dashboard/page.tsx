@@ -4,15 +4,13 @@ import Image from "next/image";
 import React from "react";
 import {
     FiAlertTriangle,
-    FiBarChart,
-    FiBarChart2,
     FiCalendar,
     FiClock,
     FiLogOut,
     FiSettings,
     FiUsers,
 } from "react-icons/fi";
-
+import {colorMap} from "@/constants";
 const CARDS = [
     {
         title: "Incident Reports",
@@ -235,7 +233,9 @@ const StaffDashboardPage = () => {
                                     {RECENTACTIVITY.map((activity, index) => (
                                         <div
                                             key={index}
-                                            className={`p-4 rounded-lg border-l-4 border-l-${activity.color}-500  bg-${activity.color}-50`}
+                                            //@ts-ignore
+                                            className={`p-4 rounded-lg border-l-4 ${colorMap[activity.color] || 'bg-gray-100 text-gray-600'
+                                                                                        }`}
                                         >
                                             <div className="flex justify-between items-start">
                                                 <div>
@@ -247,7 +247,7 @@ const StaffDashboardPage = () => {
                                                     </p>
                                                 </div>
                                                 <span className="text-xs text-gray-500 flex items-center">
-                                                    <FiClock /> {activity.time}
+                                                    <FiClock className="mr-2"/> {activity.time}
                                                 </span>
                                             </div>
                                         </div>

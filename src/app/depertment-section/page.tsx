@@ -4,19 +4,15 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import {
     FiAlertTriangle,
-    FiAlignJustify,
-    FiBook,
     FiBookOpen,
     FiCamera,
     FiLogOut,
     FiMonitor,
-    FiPaperclip,
-    FiPhone,
     FiShield,
     FiShoppingCart,
-    FiSpeaker,
     FiUsers,
 } from "react-icons/fi";
+import { colorMap } from "@/constants";
 
 const DEPARTMENTS = [
     {
@@ -210,6 +206,8 @@ const DEPARTMENTS = [
     },
 ];
 
+
+
 const DepeatmentSectionPage = () => {
     const router = useRouter();
     return (
@@ -265,8 +263,9 @@ const DepeatmentSectionPage = () => {
                             >
                                 <div className="flex flex-col space-y-1.5 p-6 text-center pb-4">
                                     <div
-                                        className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 bg-${dept.color}-100 text-${dept.color}-600`}
-                                    >
+                                       //@ts-ignore
+                                        className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 ${colorMap[dept.color] || 'bg-gray-100 text-gray-600'
+                                            }`}                                    >
                                         {dept.icon}
                                     </div>
                                     <h3 className="tracking-tight text-lg font-semibold text-gray-800">
